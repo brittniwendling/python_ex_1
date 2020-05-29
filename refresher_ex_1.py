@@ -25,6 +25,8 @@
 # Task: create a variable with your name and print out Hello <name>
 print("start of part 0") # set breakpoint here
 # your code here
+my_name = "Brittni"
+print("Hello", my_name)
 
 
 print("end of 0") # set breakpoint here 
@@ -107,6 +109,16 @@ print("start of part 1") # set breakpoint here
 L = [0, [], [1,2,3,4], [[5],[6,7]], [8,9,10]]
 print(L)
 # your code
+pt1 = L[0] # get 0
+pt2 = L[2][1] # get 2
+pt3 = L[2][2] # get 3
+pt4 = L[3][0][0] # get 5
+pt5 = L[3][1][0] # get 6
+pt6 = L[4][0] # get 8
+pt7 = L[4][2] # get 10
+
+B = [pt1, pt2, pt3, [pt4, pt5], pt6, pt7] #compile final list of new parts
+print(B) #print list B
 
 
 print("end of 1") # set breakpoint here 
