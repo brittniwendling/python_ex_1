@@ -118,7 +118,7 @@ pt6 = L[4][0] # get 8
 pt7 = L[4][2] # get 10
 
 B = [pt1, pt2, pt3, [pt4, pt5], pt6, pt7] #compile final list of new parts
-print(B) #print list B
+print(B) #print new list B
 
 
 print("end of 1") # set breakpoint here 
@@ -171,7 +171,12 @@ print(newL) # [0, 2, 3, [5, 6], 8, 10]
 print("start of part 2") # set breakpoint here
 s = "Python is an interpreted, high-level, general-purpose programming language. Created by Guido van Rossum and first released in 1991, Python's design philosophy emphasizes code readability with its notable use of significant whitespace. Its language constructs and object-oriented approach aim to help programmers write clear, logical code for small and large-scale projects."
 # your code here
-
+split_sentences = s.split(".") # split s into seperate sentences at the period (.)
+#print(split_sentences) # DEBUG: print the result of the sentence split
+num_sentences = len(split_sentences) # get the number of split sentences
+print("The number of sentences is:", num_sentences)
+for x in split_sentences: # create loop that loops through and prints out each split sentence
+    print(x)
 print("end of 2") # set breakpoint here 
 '''
 
