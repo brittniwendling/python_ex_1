@@ -227,6 +227,7 @@ for e in sentence_list:
 # GENERAL-PURPOSE
 # programming
 # LANGUAGE
+
 print("start of part 3") # set breakpoint here
 # your code here
 split_words = s.split() # split s into list of words seperated by space
@@ -241,8 +242,6 @@ for x in split_words: # create a loop over every word in the split_words list
     else:
         print(x)
         make_uppercase = True # since it's fixed to False right now, flips from False to True to alternate words
-
-
 
 print("end of 3") # set breakpoint here 
 '''
@@ -319,7 +318,12 @@ print("start of part 4") # set breakpoint here
 s = "A very long description" # a long string
 filler = "..."
 # your code here
-
+for x in range(5,15): # loop over every number between 5 - 15
+    if len(filler) + x * 2 > len(s): # if the lenth of the filler and num characters at beginning/end is larger than length of string, just print the whole string
+        print(x, s)
+    else: # if length of filler with num characters at beginning/end is smaller than length of string, perform the abbreviation w/ filler
+        string_abbreviated = s[0:x] + filler + s[-x:] # piece together first x characters, filler, and last x characters. FYI: I had trouble figuring out how to do this and had to look at the solution to know to do [-x:] at the end. I was doing just [x:]. I understand why now.
+        print(x, string_abbreviated)
 
 print("end of 4") # set breakpoint here 
 '''
