@@ -229,6 +229,19 @@ for e in sentence_list:
 # LANGUAGE
 print("start of part 3") # set breakpoint here
 # your code here
+split_words = s.split() # split s into list of words seperated by space
+#print(split_words) # DEBUG: show print out of s split into words
+make_uppercase = False # will begin with False for the first word. Will alternate to True for the 2nd word to make uppercase, and repeat.
+for x in split_words: # create a loop over every word in the split_words list
+    x = x.replace(",", "") # remove all commas 
+    x = x.replace(".", "") # remove all periods
+    if make_uppercase == True: 
+        print(x.upper()) # will print the word in all uppercase 
+        make_uppercase = False # since it's fixed to True right now, flips from True to False to alternate words
+    else:
+        print(x)
+        make_uppercase = True # since it's fixed to False right now, flips from False to True to alternate words
+
 
 
 print("end of 3") # set breakpoint here 
